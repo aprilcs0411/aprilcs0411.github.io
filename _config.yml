@@ -1,7 +1,7 @@
 # Site settings
 title: Beginning
 description: Every day is a new day.
-cover: assets\images\cover.png
+cover: assets\images\cover.jpg
 logo: assets\images\logo.jpg
 favicon: assets\images\favicon.jpg
 baseurl: "" # the ubpath of your site, e.g. /blog/ or / for root
