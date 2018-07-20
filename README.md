@@ -1,137 +1,176 @@
-![Jekyll Version](https://img.shields.io/badge/Jekyll-3.1.2-red.svg)
-![Build Status](https://gitlab.com/jekyll-themes/default-bundler/badges/master/build.svg)
+# HANUMAN Jekyll Theme
 
-----
+[![Build Status](https://travis-ci.org/samanyougarg/hanuman.svg?branch=master)](https://travis-ci.org/samanyougarg/hanuman)
 
-View Demo: https://lorepirri.gitlab.io/jekyll-theme-simple-blog/
+Hanuman is a minimal yet powerful Jekyll theme for your blogs and websites.
 
------
-# Simple Blog Theme
+It is built using the open source [AMP Start framework](https://www.ampstart.com/) and can be customized as per your requirements.
 
-*Simple Blog is a Jekyll theme for Gitlab or GitHub Pages. It is based on [Cayman Blog Theme](https://github.com/lorepirri/cayman-blog). You can [preview the theme to see what it looks like](https://lorepirri.gitlab.io/jekyll-theme-simple-blog/), or even [use it today](#install).*
+<a href="https://www.buymeacoffee.com/samanyougarg"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" target="_blank"></a>
 
-<img src="https://gitlab.com/lorepirri/jekyll-theme-simple-blog/raw/master/simple-blog-theme.png" alt="Thumbnail of jekyll-theme-simple-blog" style="max-width:30%; border: 1px solid grey;"/>
+## Live Demo
+## [Hanuman](https://samanyougarg.com/hanuman)
+![Hanuman](/Screenshots/hanuman.jpg "Hanuman Preview")
+
 
 ## Features
 
-- Blog
-- Responsive
 - Minimal
-- Multi-language
-- SEO optimized for Facebook preview
-- Facebook plugins integration (Page, Comments, Messenger, Like)
-- Facebook Mirring Comments
-- Social buttons (facebook, instagram, linkedin, twitter, github, gitlab)
-- RSS feed multi-language
+- Responsive
+- Syntax Highlighting for code
+- Cover Images for homepage and blog posts
+- Social Sharing
+- Simple Navigation Menu
+- Pagination
+- Google Analytics
+- Can be easily installed via "theme gem"
+- Github Pages support
+- Easily Customisable
+- Tags
+- Multiple Authors
 
-## Install
+## What is AMP
 
-Simple Blog Theme is 100% compatible with GitLab and GitHub Pages.
+AMP stands for [Accelerated Mobile Pages](https://www.ampproject.org/), a Google-backed project designed as an open standard for any publisher to have pages load quickly on mobile devices.
 
-### Install as a Fork
+## Installation
 
-1. [Fork the repo](https://gitlab.com/lorepirri/jekyll-theme-simple-blog)
-2. Clone down the repo with one of the two:
-    * ssh `$ git clone git@gitlab.com:your-username/jekyll-theme-simple-blog.git`
-    * https: `$ git clone https://gitlab.com/lorepirri/jekyll-theme-simple-blog.git`
-3. Empty the `_posts/` folder
-4. Install bundler and gems with `$ script/bootstrap`
-5. Run Jekyll with `$ script/server`
-6. Modify `_config.yml`, `about-en.md`, `contact-en.md`, and the other pages for your project
-6. Write your posts in `_posts/en` and `_posts/<other-language>`
-7. [Customize the theme](customizing)
+There are different ways to install the theme -
 
-### SEO tags
+### 1. Cloning the repository and updating settings
+1. Fork this repository and clone the forked repository.
+2. Update the _config.yml file as per your requirements.
+3. Add your posts to the _posts directory.
+4. Deploy to Github Pages or your own server.
 
-Simple Blog includes simple SEO tags from [jekyll-social-metatags](https://github.com/lorepirri/jekyll-social-metatags). Have a look at the page for its usage.
+#### Deploying to Github Pages
+**Method 1**
 
-The usage is compatible with the plugin [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag), which provides a battle-tested template of crowdsourced best-practices.
+Push the contents of the destination folder (mentioned in _config.yml. eg - destination: ../hanuman-pages/) to the gh-pages branch(if project page) or master branch(if user page) of your repository.
 
-To switch to a better SEO tags however, one should install [Jekyll Feed plugin](https://github.com/jekyll/jekyll-feed):
+**Method 2**
 
-1. Add this line to your site's Gemfile:
+- Set up travis-ci for your fork.
+- Generate your secure token with the travis gem:
+  Run `gem install travis` on your terminal.
+- Grab the GH_TOKEN from https://github.com/settings/tokens
+- Then run `travis encrypt 'GIT_NAME="YOUR_USERNAME" GIT_EMAIL="YOUR_EMAIL" GH_TOKEN=YOUR_TOKEN'`
+- Add the token to your .travis.yml file.
+Now you just need to push the files. Travis will generate the HTML files and automatically push them to your gh-pages branch.
+This is the setup I am using.
 
-    ```ruby
-    gem 'jekyll-seo-tag'
-    ```
+### 2. Ruby Gem Method
+Add this line to your Jekyll site's `Gemfile`:
 
-2. And then add this line to your site's `_config.yml`:
-
-    ```yml
-    gems:
-      - jekyll-seo-tag
-    ```
-
-3. Replace with the following, the `<!-- jekyll-seo-tag -->` comment in your site's `default.html`:
-
-      ```liquid
-      {% seo %}
-      ```
-
-For more information about configuring this plugin, see the official [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag) page.
-
-
-### Stylesheet
-
-If you'd like to add your own custom styles:
-
-1. Create a file called `/assets/css/style.scss` in your site
-2. Add the following content to the top of the file, exactly as shown:
-    ```scss
-    ---
-    ---
-
-    @import "{{ site.theme }}";
-    ```
-3. Add any custom CSS (or Sass, including imports) you'd like immediately after the `@import` line
-
-### Layouts
-
-If you'd like to change the theme's HTML layout:
-
-1. [Copy the original template](https://gitlab.com/lorepirri/jekyll-theme-simple-blog/blob/master/_layouts/default.html) from the theme's repository<br />(*Pro-tip: click "raw" to make copying easier*)
-2. Create a file called `/_layouts/default.html` in your site
-3. Paste the default layout content copied in the first step
-4. Customize the layout as you'd like
-
-### Sass variables
-
-If you'd like to change the theme's [Sass variables](https://gitlab.com/lorepirri/jekyll-theme-simple-blog/blob/master/_sass/variables.scss), set new values before the `@import` line in your stylesheet:
-
-```scss
-$section-headings-color: #0086b3;
-
-@import "{{ site.theme }}";
+```ruby
+gem "hanuman"
 ```
 
-## Roadmap
+And add this line to your Jekyll site's `_config.yml`:
 
-See the [open issues](https://gitlab.com/lorepirri/jekyll-theme-simple-blog/issues) for a list of proposed features (and known issues).
+```yaml
+theme: hanuman
+```
 
-## Project philosophy
+And then execute:
 
-The Simple Blog Theme is intended to make it quick and easy for Gitlab or GitHub Pages users to create their first (or 100th) website. The theme should meet the vast majority of users' needs out of the box, erring on the side of simplicity rather than flexibility, and provide users the opportunity to opt-in to additional complexity if they have specific needs or wish to further customize their experience (such as adding custom CSS or modifying the default layout). It should also look great, but that goes without saying.
+    $ bundle
+
+Or install it yourself as:
+
+    $ gem install hanuman
+
+You'll also need to copy or create the _config.yml file just like in this repository. Similarly, you'll need to have a navigation.yml and author.yml in your _data directory.
+
+#### Deploying to Github Pages
+Run `bundle exec jekyll serve` inside your cloned repository. Push the contents of the resulting _site to your Github Pages repository.
+
+
+### 3. Jekyll Remote Theme
+1. Create or update your Gemfile with the following -
+
+```ruby
+source "https://rubygems.org"
+gem "github-pages", group: :jekyll_plugins
+gem "jekyll-remote-theme"
+```
+
+2. Update the bundled gems using `bundle` command.
+
+3. Add `remote_theme: "hanuman"` to your `_config.yml`.
+
+4. Add `jekyll-remote-theme` to the plugins array of your `_config.yml` -
+
+```yaml
+plugins:
+  - jekyll-remote-theme
+```
+
+## Usage
+
+### _config.yml
+Update _config.yml with your respective settings like updating your site's name, description etc...
+
+### Styling
+AMP has a limitation that you can only use inline css.
+All the CSS for this theme is in the styles.scss file in the includes directory.
+
+#### Changing the Default Color
+In the styles.scss file in the includes directory, you can change the hex value of $theme-color to the color you would like your site to use.
+
+### Author Information
+Author information is present in the author.yml file in the _data folder. You can update the fields of that file as per your requirements.
+
+### Sidenav
+Sidenav can be updated from the navigation.yml file in the _data folder.
+
+## Writing Posts
+You can write posts just as you would in Jekyll, the only difference being that AMP has some strict guidelines on including external content.
+
+You cannot use Markdown format or normal HTML tags. AMP provides its own custom tags for images, videos etc...
+
+### Examples -
+
+**Images**
+`<amp-img src="welcome.jpg" alt="Welcome" height="400" width="800"></amp-img>`
+
+**Videos**
+`<amp-youtube data-videoid="mGENRKrdoGY" layout="responsive" width="480" height="270"></amp-youtube>`
+
+[See Full AMP Documentation.](https://www.ampproject.org/docs/)
+
+### Using AMP Components
+Some AMP components require you to specify external scripts before using them.
+You can specify these scripts in the head.html file in the includes directory after the already imported scripts and then use these components in any post.
+
+## Validating your page with AMP
+AMP provides built-in validator to validate your pages so that they can rendered quickly.
+
+You can access this validator by opening the Developer Console in your browser and adding #development=1 to any url of your site.
+
+Example -
+http://localhost:4000/#development=1
+
+If you have errors on your page, AMP will list those for you in the console. If you do not have any errors, you'll get a message "AMP Validation Successful" on your console.
+
+## Enabling Google Analytics
+1. Set up your Analytics Tracking ID in _config.yml.
+2. Remove {% comment %} and {% endcomment %} tags in the default.html file in layouts directory.
 
 ## Contributing
 
-Interested in contributing to Simple Blog? We'd love your help. Simple Blog is an open source project, built one contribution at a time by users like you. See [the CONTRIBUTING file](CONTRIBUTING.md) for instructions on how to contribute.
+Bug reports and pull requests are welcome on GitHub at https://github.com/samanyougarg/hanuman. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
-### Previewing the theme locally
+To submit a pull request -
 
-If you'd like to preview the theme locally (for example, in the process of proposing a change):
+1. Fork/clone the repository.
+2. Develop.
+3. Create a new branch from the master branch.
+4. Open a pull request on Github describing what was fixed or added.
 
-1. Clone down the theme's repository (`git clone https://gitlab.com/lorepirri/jekyll-theme-simple-blog`)
-2. `cd` into the theme's directory
-3. Run `script/bootstrap` to install the necessary dependencies
-4. Run `script/server` to start the preview server
-5. Visit [`localhost:4000`](http://localhost:4000) in your browser to preview the theme
+## Thanks
+Hanuman is based on [amplify](https://github.com/ageitgey/amplify) jekyll theme. Thank You.
 
+## License
 
-[`.gitlab-ci.yml`]: https://gitlab.com/jekyll-themes/default-bundler/blob/master/.gitlab-ci.yml
-[`Gemfile`]: https://gitlab.com/jekyll-themes/default-bundler/blob/master/Gemfile
-[`.gitignore`]: https://gitlab.com/jekyll-themes/default-bundler/blob/master/.gitignore
-[`_config.yml`]: https://gitlab.com/jekyll-themes/default-bundler/blob/master/_config.yml
-
-[Bundler]: http://bundler.io/
-[Jekyll]: http://jekyllrb.com/
-[jek-312]: https://rubygems.org/gems/jekyll/versions/3.1.2
+The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
