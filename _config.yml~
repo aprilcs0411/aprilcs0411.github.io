@@ -1,11 +1,11 @@
 # Site settings
-title: beginning
-description: Hanuman is a minimal yet powerful Jekyll theme for your blogs and websites.
+title: Beginning
+description: Every day is a new day.
 cover: assets/images/cover.jpg
 logo: assets/images/logo.png
 favicon: assets\images\favicon.jpg
-baseurl: "/hanuman/" # the subpath of your site, e.g. /blog/ or / for root
-url: "https://samanyougarg.com" # the base hostname & protocol for your site
+baseurl: "" # the ubpath of your site, e.g. /blog/ or / for root
+url: "https://aprilcs0411.github.io" # the base hostname & protocol for your site
 paginate:	5 # The number of posts to show per page on your homepage
 
 # Social
@@ -38,8 +38,8 @@ plugins:
 # Settings for rake task
 safe: False
 lsi: False
-username: samanyougarg #github username
-repo: hanuman #github repository
+username: aprilcs0411 #github username
+repo: aprilcs0411 #github repository
 branch: master #branch
 relative_source: ../hanuman/ #source directory
 destination: ../hanuman-pages/ #destination directory

@@ -1,17 +1,16 @@
 # Site settings
 title: Beginning
 description: Every day is a new day.
-cover: assets/images/cover.jpg
-logo: assets/images/logo.png
+cover: assets\images\cover.png
+logo: assets\images\logo.jpg
 favicon: assets\images\favicon.jpg
 baseurl: "" # the ubpath of your site, e.g. /blog/ or / for root
 url: "https://aprilcs0411.github.io" # the base hostname & protocol for your site
 paginate:	5 # The number of posts to show per page on your homepage
 
 # Social
-facebook: facebook
-twitter: twitter
-github:  github
+weibo: weibo
+github: github
 
 #Additional Pages
 about: about
