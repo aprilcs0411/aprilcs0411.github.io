@@ -1,6 +1,6 @@
 ﻿---
 layout: post
-title: first post
+title: data exploration with R
 date: 2018-07-22 04:00:00
 tags: exploration R
 author: aprilcs0411
@@ -110,9 +110,9 @@ summary(pooled)
 mi和Amelia包也有其他函数支持。<br/>
 其他专业插补方法包括：mvnmle，cat，seqknn，arrayImpute，arrayMissPattern，longitudinalData等……
 </li>
+<li>简单插补，用均值、中位数或众数插补。但引入偏差，尽量避免。</li>
 </ul>
 </li>
-<li>简单插补，用均值、中位数或众数插补。但引入偏差，尽量避免。</li>
 <li>数据变换：根据需要进行数据标准化和类型变换以及删除等。
 <ul>
 <li>发现错误数据，可以合理删除。但通常，离群点有可能意味着模型的不完善。</li>
@@ -126,7 +126,7 @@ mi和Amelia包也有其他函数支持。<br/>
 <li>AIC()比较模型，AIC值更小更好，赤池信息准则</li>
 <li>变量逐步选择，向前、向后、前后逐步，MASS包中的stepAIC(fit_model，direction="")</li>
 <li>全子集回归，leaps包中的regsubsets（）慢……暴力比较。算是辅助手段吧。</li>
-<ul>
+</ul>
 </li>
 <li>功效分析：实验结果效用or需要样本数量。pwr包中的各种函数</li>
 </ol>
