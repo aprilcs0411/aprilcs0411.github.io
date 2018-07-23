@@ -70,16 +70,16 @@ author: aprilcs0411
 <li>发现相关性
 <ul>
 <li>分类变量：</li>
-卡方检验chisq.test(table)，数据量少时有可能不准确。对于四格表数据(二维列联表)，使用卡方检验的条件为样本量大于 40，且最小理论频数应大于 5。p越小，相关性越显著。<br/>
-fisher检验fisher.test(table)，适用小样本量，行数>2。p越小，相关性越显著。
+a)卡方检验chisq.test(table)，数据量少时有可能不准确。对于四格表数据(二维列联表)，使用卡方检验的条件为样本量大于 40，且最小理论频数应大于 5。p越小，相关性越显著。<br/>
+b)fisher检验fisher.test(table)，适用小样本量，行数>2。p越小，相关性越显著。
 <li>数值变量：</li>
-方差：var(x, y = NULL, na.rm = FALSE, use)<br/>
-协方差：cov(x, y = NULL, use = "everything",    method = "pearson")，method还有 "kendall", "spearman"<br/>
-相关系数：cor(x, y = NULL, use = "everything",    method = "pearson")，method还有 "kendall", "spearman"<br/>
-偏相关：控制一个或多个定量变量时，分析另外两个定量变量间的关系。ggm包中的pcor函数。pcor(u,s)u<-vector(a1,a2,b1,b2,……)a1,a2是需要分析的两个变量下标，b系列是需要控制的变量下标。s为协方差矩阵s<-cov（dataframe）<br/>
-相关显著性检验：cor.test()函数，p越小，越相关。psych包中的corr.test(dataframe,use="complete（缺失值行删除）"，method=“person”)函数可以同时进行多种相关性检测。<br/>
-t检验：用于检验两个数据集的均值差异是否显著。t.test(x,y)（样本服从正态分布，两组数据总方差相等，适用于样本量较少的情况。p越小，差别越显著。如果数据量分别大于100个，不需要做方差齐性检验。否则需要检验，且方差不齐需用t'检验）多数据集表现是否一致，可用aov（y~x）x为分组变量。多重比较TukeyHSD（aov（y~x））两两分析。multcomp包中的glht函数也可以。不确定是否方差齐性，可用wilcox.test()。
-F检验：方差齐性检验。F检验对于数据的正态性非常敏感，Levene检验, Bartlett检验或者Brown–Forsythe检验的稳健性都要优于F检验。
+a)方差：var(x, y = NULL, na.rm = FALSE, use)<br/>
+b)协方差：cov(x, y = NULL, use = "everything",    method = "pearson")，method还有 "kendall", "spearman"<br/>
+c)相关系数：cor(x, y = NULL, use = "everything",    method = "pearson")，method还有 "kendall", "spearman"<br/>
+d)偏相关：控制一个或多个定量变量时，分析另外两个定量变量间的关系。ggm包中的pcor函数。pcor(u,s)u<-vector(a1,a2,b1,b2,……)a1,a2是需要分析的两个变量下标，b系列是需要控制的变量下标。s为协方差矩阵s<-cov（dataframe）<br/>
+e)相关显著性检验：cor.test()函数，p越小，越相关。psych包中的corr.test(dataframe,use="complete（缺失值行删除）"，method=“person”)函数可以同时进行多种相关性检测。<br/>
+f)t检验：用于检验两个数据集的均值差异是否显著。t.test(x,y)（样本服从正态分布，两组数据总方差相等，适用于样本量较少的情况。p越小，差别越显著。如果数据量分别大于100个，不需要做方差齐性检验。否则需要检验，且方差不齐需用t'检验）多数据集表现是否一致，可用aov（y~x）x为分组变量。多重比较TukeyHSD（aov（y~x））两两分析。multcomp包中的glht函数也可以。不确定是否方差齐性，可用wilcox.test()。<br/>
+g)F检验：方差齐性检验。F检验对于数据的正态性非常敏感，Levene检验, Bartlett检验或者Brown–Forsythe检验的稳健性都要优于F检验。
 </ul>
 </li>
 <li>发现协同效应（交互作用）: effects包中的effect函数，plot(effect("interact_terms"，fit_model, list(one_term=vector_contorl_parameter)),multiline=TRUE)</li>
