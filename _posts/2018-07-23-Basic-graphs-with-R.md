@@ -17,7 +17,7 @@ author: aprilcs0411
 
 
 <h3 id="basic" name="basic">1.R基本画图</h3>
-<h4 id=c11>1）基本函数plot()</h4>
+<h4 id="c11" name="c11"> 1）基本函数plot() </h4>
 <pre>
  plot (cars,
       type="p",
@@ -48,13 +48,11 @@ author: aprilcs0411
 points(cars$dist~cars$speed,pch=1,cex=3)
 </pre>
 <amp-img src="{{ site.baseurl }}assets/images/g2.jpg" width="320" height="200" layout="responsive" alt="" class="mb3"></amp-img>
-<h4 id=c12>2）barplot（）</h4>
-
 
 <h3 id="chapter2" name="chapter2">2.调整参数</h3>
-<h4 id=c21>1）颜色</h4>
-<p>单个颜色可参考<a href="http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf">R颜色列表</a>。</p><br/>
-<p>一组颜色设置可利用调色板和包RColorBrewer。</p><br/>
+<h4 id="c21" name="c21"> 1）颜色</h4>
+<p>单个颜色可参考<a href="http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf">R颜色列表</a>。
+一组颜色设置可利用调色板和包RColorBrewer。</p>
 <ol>
 <li>
 自带调色板
@@ -113,29 +111,29 @@ plot(iris$Petal.Length, iris$Petal.With, col = brewer.pal(3, "Set2")[iris$Specie
 </li>
 </ol>
 
-<h4 id=c22>2）颜色配置</h4>
+<h4 id="c22" name="c22"> 2）颜色配置</h4>
 <ul>
 <li>图片背景色 par(bg='gray')</li>
 <li>仅坐标范围背景色x<-par("usr");rect(x[1],x[3],x[2],x[4],col="gray")# 注意传值顺序</li>
 <li>设置各个单项的颜色 plot(y~x,col.axis="red",col.lab="blue",col.main="green");或者par（col.axis="",col.lab="",col.main=""）#应用到所有子图</li>
 <li>利用颜色调色板，保存颜色向量，以备使用mycolor<-brewer.pal(7,"YlOrRd") #"调色板的名字"</li>
 </ul>
-<h4 id=c22>2）字的配置</h4>
+<h4 id="c23" name="c23"> 3）字的配置</h4>
 <ul>
 <li>设置图中字体字号par(family="serif",font=2) #应用到所有子图。font：1，普通，2，加粗，3，斜体，4，加粗斜体。family可用names（pdfFonts（））查看</li>
 <li>设置pdf中字体字号 pdf（family=""）</li>
 </ul>
-<h4 id=c23>3）点的配置</h4>
+<h4 id="c24" name="c24"> 4）点的配置</h4>
 <ul>
 <li>画图同时配置，plot(,,,pch=19,cex=2),pch共25中图标选择，还有其他ASCII码等，可查看points函数</li>
 <li>画点同时配置，points（data, pch=19,col=""，cex=vector,lwd=）col指点的边沿的颜色，bg指21-25型的填充颜色，cex指点的大小，lwd，画点的线宽。</li>
 </ul>
-<h4 id=c24>4）线的配置</h4>
+<h4 id="c25" name="c25">  5）线的配置</h4>
 <ul>
 <li>画图同时配置，plot(,,,lty=0,lwd=2),lty共0~6种选择，还可以用名称指明，可查看lines函数</li>
 <li>画线同时配置，lines(data, lty=4.lwd=2）</li>
 </ul>
-<h4 id=c25>5）图例的配置</h4>
+<h4 id="c26" name="c26">  6）图例的配置</h4>
 <ul>
 <li>在图上添加，点型，legend（“position", lenged=Vector_texts, cex=n,pch=vector_type，ncol=num_col）</li>
 <li>在图上添加，线型，legend（“position", lenged=Vector_texts, lwd=n,lty=vector_type，ncol=num_col）</li>
@@ -149,13 +147,13 @@ plot(iris$Petal.Length, iris$Petal.With, col = brewer.pal(3, "Set2")[iris$Specie
                                        bg = "gray90")
 </li>
 </ul>
-<h4 id=c26>6）坐标轴的配置</h4>
+<h4 id="c27" name="c27">7）坐标轴的配置</h4>
 <ul>
 <li>axis(side=1, at=1:10, labels=letters[1:10].col="blue",col.ticks="yellow") #at表明数目，labels是新的坐标轴标记。分别是坐标轴的颜色和上面的竖线的颜色……</li>
 <li>plot(rnorm(100),xaxp=c(0,100,10),col.axis="red")#灵活性不足</li>
 <li>对数坐标轴，plot(10^c(1:5),log="y",type="b")</li>
 </ul>
-<h4 id=c27>7）子图的配置</h4>
+<h4 id="c28"  name="c28"> 8）子图的配置</h4>
 <ul>
 <li>par（fin=c(6,6),pin=c(4,4)）</li>
 <li>par(mai=c(1,1,1,1),omi=c(0.1,0.1,0.1,0.1))</li>
