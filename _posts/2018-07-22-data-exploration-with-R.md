@@ -1,8 +1,8 @@
 ﻿---
 layout: post
 title: first post
-date: 2018-07-20 04:00:00
-tags: test 坑
+date: 2018-07-22 04:00:00
+tags: exploration R
 author: aprilcs0411
 ---
 
