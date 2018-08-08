@@ -23,7 +23,7 @@ author: aprilcs0411
 
 
 <h3 id="basic" name="basic">1.Data</h3>
-<p>数据处理流程包括：数据清理、转化等(也就是ETL)，变为带label的表格型数据</p>
+<p>数据处理流程包括：数据清理、转化等(也就是ETL)，变为带label的表格型数据。</p>
 
 <h3 id="b2" name="b2">2.Label Types</h3>
 <p>经过数据转化，label可以有多种形式：</p>
@@ -67,4 +67,4 @@ author: aprilcs0411
 <p>特征选择有多种方法。(这一步的特征选择和特征combine步骤不同，上一步主要是变量的分析和变形，以便进入模型训练阶段。这一步是选择特征，以提高泛化能力。)最常见的是贪婪选择：前向后向特征选择。另外可以通过logit model 的coefficients和随机森林的特征来选择最优参数。这样的话，人工工作比较多。特征选择还可以用gradient boosting实现，作者推荐xgboost，更快更鲁棒。稀疏数据集的参数选择推荐用randomforestclassifier/randomforestregressor和xgboost结合。另外对于正值的系数矩阵，可以chi-2，在sklearn包里。</p>
 <p>为避免过拟合，保持较少的estimator和较少的超参优化配置。</p>
 <p>最后进入模型选择和超参优化。见下图。RS*为random search，值不太确定。</p>
-<amp-img src="{{ site.baseurl }}assets/images/p4.ong" width="785" height="800" layout="responsive" alt="" class="mb3"></amp-img>
+<amp-img src="{{ site.baseurl }}assets/images/p4.png" width="785" height="800" layout="responsive" alt="" class="mb3"></amp-img>
