@@ -2,6 +2,7 @@
 layout: post
 title: unbalanced data
 
+
 date: 2018-08-09 04:00:00
 tags: graph R
 author: aprilcs0411
@@ -11,7 +12,7 @@ author: aprilcs0411
 
 
 
-   
+  
 <p>类别不平衡数据的处理方法，主要用library(caret)，采用过采样或欠采样方法。翻译https://shiring.github.io/machine_learning/2017/04/02/unbalanced</p>
 <h2 id="heading1"><a href="#basic">1.why？</a></h2>
 <h2 id="heading2"><a href="#b2">2.how？</a></h2>

@@ -1,7 +1,6 @@
 ﻿---
 layout: post
 title: review data exploration with R
-
 date: 2018-08-08 04:00:00
 tags: graph R
 author: aprilcs0411
@@ -11,7 +10,7 @@ author: aprilcs0411
 
 
 
-   
+  
 <p>跟着dataming with R这本书再复习一下数据查看的常用操作。</p>
 <h2 id="heading1"><a href="#basic">1.basic dataset information</a></h2>
 <h2 id="heading2"><a href="#b2">2.explore individual variables</a></h2>
