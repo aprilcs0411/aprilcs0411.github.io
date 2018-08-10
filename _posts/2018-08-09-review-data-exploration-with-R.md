@@ -1,7 +1,7 @@
 ﻿---
 layout: post
 title: review data exploration with R
-date: 2018-08-08 04:00:00
+date: 2018-08-09 04:00:00
 tags: graph R
 author: aprilcs0411
 ---
