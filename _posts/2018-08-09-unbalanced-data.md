@@ -1,8 +1,9 @@
 ﻿---
 layout: post
 title: unbalanced data
+
 date: 2018-08-09 04:00:00
-tags: basic R
+tags: graph R
 author: aprilcs0411
 ---
 
