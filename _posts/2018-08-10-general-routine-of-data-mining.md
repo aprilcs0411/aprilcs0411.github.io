@@ -1,7 +1,7 @@
 ﻿---
 layout: post
 title: General Routine of Data Mining
-date: 2018-08-07 04:00:00
+date: 2018-08-10 04:00:00
 tags: basic routine python
 author: aprilcs0411
 ---
