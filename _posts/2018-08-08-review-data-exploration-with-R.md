@@ -17,11 +17,6 @@ author: aprilcs0411
 <h2 id="heading3"><a href="#b3">3.explore multiple variables</a></h2>
 <h2 id="heading4"><a href="#b4">4.Libraries</a></h2>
 
-
-
-
-
-
 <h3 id="basic" name="basic">1.basic dataset information</h3>
 <p>查看数据维度和变量名，以及基本描述信息等。</p>
 <ul>
@@ -48,8 +43,6 @@ author: aprilcs0411
 <li>boxplot(df$numcol~df$factorcol)，不同类别的数值分布。</li>
 </ul>
 
-
-
 <h3 id="b4" name="b4">4.more explorations</h3>
 <p>其他探索。</p>
 <ul>
@@ -58,4 +51,3 @@ author: aprilcs0411
 <li>parcoord(df$numcols,color=df$factorcol),MASS包。parallelplot(~df$numcols/df$factorcol),lattice包。平行参数可视化。</li>
 <li>ggplot2包的多种图。</li>
 </ul>
-

@@ -1,7 +1,7 @@
 ﻿---
 layout: post
 title: General Routine of Data Mining
-date: 2018-08-10 04:00:00
+date: 2018-08-07 04:00:00
 tags: basic routine python
 author: aprilcs0411
 ---
@@ -17,10 +17,6 @@ author: aprilcs0411
 <h2 id="heading3"><a href="#b3">3.Evaluation Matrics</a></h2>
 <h2 id="heading4"><a href="#b4">4.Libraries</a></h2>
 <h2 id="heading5"><a href="#b5">5.Machine Learning Framework</a></h2>
-
-
-
-
 
 <h3 id="basic" name="basic">1.Data</h3>
 <p>数据处理流程包括：数据清理、转化等(也就是ETL)，变为带label的表格型数据。</p>
