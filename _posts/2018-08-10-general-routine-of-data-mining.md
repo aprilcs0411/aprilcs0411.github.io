@@ -16,7 +16,7 @@ author: aprilcs0411
 <h2 id="heading2"><a href="#b2">2.Label Types</a></h2>
 <h2 id="heading3"><a href="#b3">3.Evaluation Matrics</a></h2>
 <h2 id="heading4"><a href="#b4">4.Libraries</a></h2>
-<h2 id="heading5"><a href="#b5">5.Machine Learning Framework</a></h2>
+<h2 id="heading5"><a href="#c5">5.Machine Learning Framework</a></h2>
 
 <h3 id="basic" name="basic">1.Data</h3>
 <p>数据处理流程包括：数据清理、转化等(也就是ETL)，变为带label的表格型数据。</p>
@@ -45,7 +45,7 @@ author: aprilcs0411
 </ol>
 
 
-<h3 id="b5" name="b5">5.Machine Learning Framework</h3>
+<h3 id="c5" name="c5">5.Machine Learning Framework</h3>
 <p>原图非常经典，附在下面。</p>
 <amp-img src="{{ site.baseurl }}assets/images/p1.png" width="800" height="600" layout="responsive" alt="" class="mb3"></amp-img>
 <p>粉色线路是一个基本流程。首先确定问题是分类还是回归问题。随后将数据分为训练集和验证集(training set , validation set)。数据集的分割必须保证label的均衡，即分层抽样。python中scikit-learn包可用。注意训练集和验证集不能重合，避免过拟合。</p>
